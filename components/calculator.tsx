@@ -181,7 +181,7 @@ export function Calculator({ onCalculate }: CalculatorProps) {
           <div className="space-y-2">
             <div className="flex items-center gap-1">
               <Label htmlFor="module" className="font-sans text-base text-purple-700">
-                Módulação <span className="font-sans text-xs text-purple-500">(mm)</span>
+                Modulação <span className="font-sans text-xs text-purple-500">(mm)</span>
                 {/* <p className= "font-mono text-xs text-purple-400">Adicione a dimensão da sua modulação. O layout será composto por múltiplos deste valor</p> */}	
               </Label>
               <Tooltip>
