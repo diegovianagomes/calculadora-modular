@@ -6,6 +6,7 @@ import { CalculatorArea } from "../components/calculator-area"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
+import { FirebaseTest } from "@/components/FirebaseTest";
 
 export default function Home() {
 	const [results, setResults] = useState<any[]>([])
@@ -15,6 +16,7 @@ export default function Home() {
 	return (
 		<div className="flex min-h-full flex-col">
 			<Header />
+			
 			<main className="min-h-full mx-auto flex items-center justify-center p-8">
 		<div className="w-full max-w-3xl">
 			{/* Container das abas */}
@@ -119,6 +121,7 @@ export default function Home() {
 
 			</main>
 			<Footer />
+			<FirebaseTest />
 		</div>
 	)
 }
