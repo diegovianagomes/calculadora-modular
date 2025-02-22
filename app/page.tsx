@@ -63,7 +63,7 @@ export default function Home() {
 			</div>
 
 			{/* Conteúdo das abas */}
-			<div className="relative z-10 rounded-xl rounded-tl-none rounded-tr-none border-2 border-purple-300 bg-white px-8 py-6 shadow-xl">
+			<div className="relative z-10 rounded-xl rounded-tl-none rounded-tr-none border-2 border-purple-300 bg-white px-8 py-6 ">
 				{activeMode === "axl" ? (
 					<Calculator
 						onCalculate={(area: number, results: any[]) => {
@@ -91,7 +91,7 @@ export default function Home() {
 				{results.map((result, index) => (
 				<div
 					key={index}
-					className="pixel-border relative overflow-hidden rounded-lg bg-white p-4 shadow-2xs transition-transform hover:scale-[1.02]"
+					className="pixel-border relative overflow-hidden rounded-lg bg-white border-2 border-purple-300 p-4 shadow-2xs transition-transform hover:scale-[1.02]"
 				>
 					<div className="space-y-2">
 					<h3 className="font-sans text-sm text-purple-600">
