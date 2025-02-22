@@ -86,7 +86,7 @@ const handleSubmit = (e: React.FormEvent) => {
   return (
     <TooltipProvider>
     	<form onSubmit={handleSubmit} className="mx-auto max-w-md space-y-6 p-4">
-		<p className="font-sans text-xs text-purple-500">Informe a área total em metros quadrados, o módulo base e uma proporção desejada para encontrar combinações modulares que se ajustem às dimensões exatas, minimizando desperdícios e otimizando o layout.</p>
+		<p className="font-sans text-xs text-purple-500">Insira a área total em metros quadrados, o módulo base e uma proporção desejada para encontrar combinações modulares que se ajustem às dimensões exatas, minimizando desperdícios e otimizando o layout.</p>
         <div className="space-y-4">
           {/* Campo Área Total */}
           	<div className="space-y-2">
