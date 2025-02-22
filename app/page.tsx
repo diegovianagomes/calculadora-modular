@@ -14,8 +14,8 @@ export default function Home() {
 
   return (
     <div className="flex min-h-full flex-col">
-	<Header />
-	<main className="min-h-full mx-auto flex items-center justify-center p-8">
+      <Header />
+      <main className="min-h-full mx-auto flex items-center justify-center p-8">
 		<div className="w-full max-w-3xl">
 			{/* Container das abas */}
 			<div className="mb-0 flex justify-start relative">
@@ -117,8 +117,8 @@ export default function Home() {
 		)}
 		</div>
 
-	</main>
-	<Footer />
+      </main>
+      <Footer />
     </div>
   )
 }

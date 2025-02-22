@@ -177,7 +177,7 @@ const handleSubmit = (e: React.FormEvent) => {
             <div className="space-y-2">
 				<div className="flex items-stretch gap-1">
 					<Label htmlFor="aspect" className="font-sans text-base text-purple-700">
-						Proporção 
+						Proporção <span className="font-sans text-xs text-white">(mm)</span>
 					</Label>
 
 					<Tooltip>
