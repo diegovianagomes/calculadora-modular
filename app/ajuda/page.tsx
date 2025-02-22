@@ -2,19 +2,42 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, ArrowUpCircle } from "lucide-react"
 import { Header } from "@/components/header"
+import { useEffect, useState } from "react"
 
 export default function HelpPage() {
+
+  const [showBackToTop, setShowBackToTop] = useState(false)
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 300) {
+          setShowBackToTop(true)
+        } else {
+          setShowBackToTop(false)
+        }
+      }
+
+      window.addEventListener("scroll", handleScroll)
+      return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
+
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", 
+      })
+    }
+
   return (
-    <div className="min-h-screen bg-white/50 backdrop-blur-sm">
+    <div className="min-h-screen backdrop-blur-sm">
       <Header />
       <div className="container mx-auto px-4 py-8">
         {/* Botão Voltar */}
         <div className="mb-8">
           <Link href="/">
-            <Button variant="ghost" className="font-pixel text-purple-700 hover:bg-purple-100">
-              <ArrowLeft className="mr-2 h-4 w-4" />
+            <Button variant="ghost" className="font-sans text-purple-700 hover:bg-purple-300 hover:text-purple-700">
+              <ArrowLeft className="h-4 w-4" />
               Voltar
             </Button>
           </Link>
@@ -39,6 +62,8 @@ export default function HelpPage() {
                 
               </div>
               <h2 className="font-sans font-semi-bold text-xl text-purple-700">Por Que Usar a Coordenação Modular?</h2>
+
+              {/*TODO: <img src="" alt="" className="mx-auto my-4 w-full max-w-md rounded-lg" /> */}
 
               <div className="rounded-lg border border-purple-200 bg-white p-4">
                 <h5 className="font-sans text-base text-purple-700">Economia de Tempo e Dinheiro</h5>
@@ -123,12 +148,19 @@ export default function HelpPage() {
     
             </div>
           </section>
-
-          
-
-          
         </div>
       </div>
+      {showBackToTop && (
+        <Button
+          onClick={scrollToTop}
+          className="fixed bottom-16 right-6 z-50 bg-purple-300 text-purple-700 hover:bg-purple-600 hover:text-white"
+        >
+          <ArrowUpCircle className="mr-2 h-4 w-4" />
+          Topo
+        </Button>
+      )}
     </div>
+
+    
   )
 }

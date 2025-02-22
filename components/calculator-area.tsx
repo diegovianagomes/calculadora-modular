@@ -85,138 +85,146 @@ const handleSubmit = (e: React.FormEvent) => {
 
   return (
     <TooltipProvider>
-      <form onSubmit={handleSubmit} className="mx-auto max-w-md space-y-6">
+    	<form onSubmit={handleSubmit} className="mx-auto max-w-md space-y-6 p-4">
+		<p className="font-sans text-xs text-purple-500">Informe a área total em metros quadrados, o módulo base e uma proporção desejada para gerar layouts flexíveis que respeitem a modulação.</p>
         <div className="space-y-4">
           {/* Campo Área Total */}
-          <div className="space-y-2">
-            <div className="flex items-center gap-1">
-              <Label htmlFor="area" className="font-pixel text-sm text-purple-700">
-                Área Total (m²)
-              </Label>
-              <Tooltip>
-                <TooltipTrigger>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="h-4 w-4 text-purple-700"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
-                    />
-                  </svg>
-                </TooltipTrigger>
-                <TooltipContent className="font-sans bg-purple-400 text-white">
-                  <p>Área total do espaço em metros quadrados</p>
-                </TooltipContent>
-              </Tooltip>
-            </div>
-            <Input
-              id="area"
-              type="number"
-              step="0.01"
-              value={area}
-              onChange={(e) => setArea(e.target.value)}
-              className="pixel-border"
-              placeholder="Ex: 150"
-              required
-            />
-          </div>
+          	<div className="space-y-2">
+				<div className="flex items-center gap-1">
+					<Label htmlFor="area" className="font-sans text-base text-purple-700">
+						Área <span className="font-sans text-xs text-purple-500">(m)</span>
+					</Label>
+					<Tooltip>
+						<TooltipTrigger>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							strokeWidth={1.5}
+							stroke="currentColor"
+							className="h-4 w-4 text-purple-700"
+						>
+							<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+							/>
+						</svg>
+						</TooltipTrigger>
+						<TooltipContent className="font-sans bg-purple-400 text-white">
+							<p>Área total do espaço em metros quadrados</p>
+						</TooltipContent>
+					</Tooltip>
+				</div>
 
-          <div className="grid grid-cols-2 gap-4">
+				<Input
+					id="area"
+					type="number"
+					step="0.01"
+					value={area}
+					onChange={(e) => setArea(e.target.value)}
+					className="pixel-border text-purple-700 placeholder:text-purple-300 focus:border-purple-700"
+					placeholder="Ex: 150"
+					required
+				/>
+          	</div>
+
+          	<div className="grid grid-cols-2 gap-4">
             {/* Campo Módulo */}
             <div className="space-y-2">
-              <div className="flex items-center gap-1">
-                <Label htmlFor="module" className="font-pixel text-sm text-purple-700">
-                  Módulo (mm)
-                </Label>
-                <Tooltip>
-                  <TooltipTrigger>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="h-4 w-4 text-purple-700"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
-                      />
-                    </svg>
-                  </TooltipTrigger>
-                  <TooltipContent className="font-sans bg-purple-400 text-white">
-                    <p>Tamanho base para cálculo dos painéis</p>
-                  </TooltipContent>
-                </Tooltip>
-              </div>
-              <Input
-                id="module"
-                type="number"
-                value={module}
-                onChange={(e) => setModule(e.target.value)}
-                className="pixel-border"
-                placeholder="Ex: 625"
-                required
-              />
+				<div className="flex items-center gap-1">
+					<Label htmlFor="module" className="font-sans text-base text-purple-700">
+						Modulação <span className="font-sans text-xs text-purple-500">(mm)</span>
+						
+					</Label>
+
+					<Tooltip>
+						<TooltipTrigger>
+							<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							strokeWidth={1.5}
+							stroke="currentColor"
+							className="h-4 w-4 text-purple-700"
+							>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+							/>
+							</svg>
+						</TooltipTrigger>
+					<TooltipContent className="font-sans bg-purple-400 text-white">
+						<p>Adicione a dimensão da sua modulação.</p>
+						<p>O layout será composto por múltiplos deste valor.</p>
+					</TooltipContent>
+					</Tooltip>
+				</div>
+
+				<Input
+					id="module"
+					type="number"
+					value={module}
+					onChange={(e) => setModule(e.target.value)}
+					className="pixel-border text-purple-700 placeholder:text-purple-300 focus:border-purple-700"
+					placeholder="Ex: 625"
+					required
+				/>
             </div>
 
             {/* Campo Proporção */}
             <div className="space-y-2">
-              <div className="flex items-center gap-1">
-                <Label htmlFor="aspect" className="font-pixel text-sm text-purple-700">
-                  Proporção
-                </Label>
-                <Tooltip>
-                  <TooltipTrigger>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="h-4 w-4 text-purple-700"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
-                      />
-                    </svg>
-                  </TooltipTrigger>
-                  <TooltipContent className="font-sans bg-purple-400 text-white">
-                    <p>Relação ideal entre largura e altura</p>
-                    <p>(ex: 1.618 - Proporção Áurea)</p>
-                  </TooltipContent>
-                </Tooltip>
-              </div>
-              <Input
-                id="aspect"
-                type="number"
-                step="0.01"
-                value={aspectRatio}
-                onChange={(e) => setAspectRatio(e.target.value)}
-                className="pixel-border"
-                placeholder="Ex: 1.618"
-                required
-              />
+				<div className="flex items-stretch gap-1">
+					<Label htmlFor="aspect" className="font-sans text-base text-purple-700">
+						Proporção 
+					</Label>
+
+					<Tooltip>
+						<TooltipTrigger>
+							<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							strokeWidth={1.5}
+							stroke="currentColor"
+							className="h-4 w-4 text-purple-700"
+							>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+							/>
+							</svg>
+						</TooltipTrigger>
+					<TooltipContent className="font-sans bg-purple-400 text-white">
+						<p>Relação ideal entre largura e altura</p>
+						<p>(ex: 1.618 - Proporção Áurea)</p>
+					</TooltipContent>
+					</Tooltip>
+				</div>
+
+				<Input
+					id="aspect"
+					type="number"
+					step="0.01"
+					value={aspectRatio}
+					onChange={(e) => setAspectRatio(e.target.value)}
+					className="pixel-border text-purple-700 placeholder:text-purple-300 focus:border-purple-700"
+					placeholder="Ex: 1.618"
+					required
+				/>
             </div>
           </div>
         </div>
         
         <Button
           type="submit"
-          className="pixel-border w-full bg-gradient-to-r from-blue-400 to-purple-400 font-pixel text-sm hover:from-blue-500 hover:to-purple-500"
+          className="pixel-border w-full bg-gradient-to-r from-pink-400 to-purple-400 font-sans text-lg hover:from-pink-500 hover:to-purple-500"
         >
-          Calcular Otimizado
+          Calcular
         </Button>
-      </form>
+      	</form>
     </TooltipProvider>
   )
 }
