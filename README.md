@@ -1,5 +1,5 @@
 # Calculadora Modular
-GitHub License
+
 
 A **Calculadora Modular** é uma ferramenta desenvolvida para arquitetos e profissionais da construção civil, projetada para otimizar o uso de espaço e materiais através de cálculos modulares precisos.
 
