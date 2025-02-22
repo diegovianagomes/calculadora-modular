@@ -12,12 +12,12 @@ const teamMembers = [
   {
     name: "Diego Viana",
     image: "/72717322.jpg",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida sollicitudin faucibus. Nunc sed dolor egestas, congue nibh eu, pretium velit. Cras vitae cursus arcu. Maecenas quis tellus pulvinar lacus vehicula posuere. Cras vitae dapibus nulla. Suspendisse lacinia in nulla ut vehicula. Quisque sed justo quis nisi egestas commodo. Pellentesque scelerisque neque quis massa bibendum ultricies. Donec enim magna, convallis et dolor ac, volutpat condimentum risus. Sed bibendum lacus nec iaculis vulputate. Sed sed lorem in magna iaculis facilisis et nec diam. Aenean sit amet volutpat ligula. Aenean sapien mauris, vehicula rutrum dignissim sed, vestibulum in enim. Donec ac vehicula sapien, tempus ultrices risus. Aenean egestas a nibh quis convallis."
+    bio: "Arquiteto e Urbanista"
   },
   {
     name: "Paula Louzada",
     image: "/whisk_custom86d263cdc34d4c4194bda3352bd670d8.png",  
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida sollicitudin faucibus. Nunc sed dolor egestas, congue nibh eu, pretium velit. Cras vitae cursus arcu. Maecenas quis tellus pulvinar lacus vehicula posuere. Cras vitae dapibus nulla. Suspendisse lacinia in nulla ut vehicula. Quisque sed justo quis nisi egestas commodo. Pellentesque scelerisque neque quis massa bibendum ultricies. Donec enim magna, convallis et dolor ac, volutpat condimentum risus. Sed bibendum lacus nec iaculis vulputate. Sed sed lorem in magna iaculis facilisis et nec diam. Aenean sit amet volutpat ligula. Aenean sapien mauris, vehicula rutrum dignissim sed, vestibulum in enim. Donec ac vehicula sapien, tempus ultrices risus. Aenean egestas a nibh quis convallis."
+    bio: "Designer de Interiores"
   }
 ]
 
