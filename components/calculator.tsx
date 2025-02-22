@@ -90,7 +90,7 @@ export function Calculator({ onCalculate }: CalculatorProps) {
   return (
     <TooltipProvider>
       <form onSubmit={handleSubmit} className="mx-auto max-w-md space-y-6 p-4">
-		<p className="font-sans text-xs text-purple-500">Insira a largura e altura do espaço em milímetros, além do módulo base , para encontrar combinações modulares que se ajustem às dimensões exatas, minimizando desperdícios e otimizando o layout.</p>
+		<p className="font-sans text-xs text-purple-500">Insira a largura e altura do espaço em milímetros, além do módulo base, para encontrar combinações modulares que se ajustem às dimensões exatas, minimizando desperdícios e otimizando o layout.</p>
         <div className="space-y-4">
           <div className="flex space-x-4">
             {/* Campo Largura */}
