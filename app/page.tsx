@@ -8,14 +8,14 @@ import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
-  const [results, setResults] = useState<any[]>([])
-  const [originalArea, setOriginalArea] = useState<number>(0)
-  const [activeMode, setActiveMode] = useState<"axl" | "area">("axl")
+	const [results, setResults] = useState<any[]>([])
+	const [originalArea, setOriginalArea] = useState<number>(0)
+	const [activeMode, setActiveMode] = useState<"axl" | "area">("axl")
 
-  return (
-    <div className="flex min-h-full flex-col">
-      <Header />
-      <main className="min-h-full mx-auto flex items-center justify-center p-8">
+	return (
+		<div className="flex min-h-full flex-col">
+			<Header />
+			<main className="min-h-full mx-auto flex items-center justify-center p-8">
 		<div className="w-full max-w-3xl">
 			{/* Container das abas */}
 			<div className="mb-0 flex justify-start relative">
@@ -85,7 +85,7 @@ export default function Home() {
 		{/* Resultados */}
 		{results.length > 0 && (
 			<div className="mt-8 space-y-4">
-				<h2 className="font-pixel text-lg text-purple-700">Área Original: {(originalArea / 1e6).toFixed(2)} m²</h2>
+				<h2 className="font-sans text-lg text-purple-700">Área Original: {(originalArea / 1e6).toFixed(2)} m²</h2>
 				
 				<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
 				{results.map((result, index) => (
@@ -94,7 +94,7 @@ export default function Home() {
 					className="pixel-border relative overflow-hidden rounded-lg bg-white p-4 shadow-2xs transition-transform hover:scale-[1.02]"
 				>
 					<div className="space-y-2">
-					<h3 className="font-pixel text-sm text-purple-600">
+					<h3 className="font-sans text-sm text-purple-600">
 					{result.formato}
 					</h3>
 					<p className="text-sm text-gray-600">
@@ -117,8 +117,8 @@ export default function Home() {
 		)}
 		</div>
 
-      </main>
-      <Footer />
-    </div>
-  )
+			</main>
+			<Footer />
+		</div>
+	)
 }
