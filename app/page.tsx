@@ -17,9 +17,9 @@ export default function Home() {
   const [results, setResults] = useState<any[]>([]);
   const [originalArea, setOriginalArea] = useState<number>(0);
   const [activeMode, setActiveMode] = useState<"axl" | "area">("axl");
-  const [authTab, setAuthTab] = useState<"login" | "signup">("login"); // Nova aba para login/cadastro
+  const [authTab, setAuthTab] = useState<"login" | "signup">("login"); 
 
-  // Verifica o estado de autenticação do usuário
+
   const [user, loading] = useAuthState(auth);
 
   return (
@@ -140,9 +140,10 @@ export default function Home() {
             </>
           ) : (
             <div className="flex flex-col items-center justify-center gap-4">
-              <p className="text-purple-700">
-                Faça login ou cadastre-se para acessar a calculadora:
+              <p className="font-bold text-purple-700">
+                Seja bem-vindo! 
               </p>
+              <p className="text-base text-purple-400">Faça login ou cadastre-se para continuar.</p>
 
               {/* Abas de Login/Cadastro */}
               <div className="w-full">
@@ -176,7 +177,7 @@ export default function Home() {
                     }`}
                     onClick={() => setAuthTab("signup")}
                   >
-                    <span className="items-center justify-center h-full">
+                    <span className="items-center justify-center h-full text-purple-700">
                       Cadastro
                     </span>
                     {authTab === "signup" && (

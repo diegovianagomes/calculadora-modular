@@ -105,3 +105,17 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.custom-input {
+  background-color: #f3e8ff; /* purple-100 */
+  color: #581c87; /* purple-700 */
+}
+
+.custom-input::placeholder {
+  color: #581c87; /* purple-700 */
+}
+
+.custom-input:focus {
+  border-color: #581c87; /* purple-700 */
+  outline-color: #581c87; /* purple-700 */
+}
