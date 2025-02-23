@@ -1,4 +1,3 @@
-// components/calculator-area.tsx
 "use client"
 
 import { useState } from "react"
@@ -23,7 +22,6 @@ export function CalculatorArea({ onCalculate }: CalculatorAreaProps) {
   const [module, setModule] = useState("")
   const [aspectRatio, setAspectRatio] = useState("1.618")
 
-  // components/calculator-area.tsx (função handleSubmit revisada)
 const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault()
 

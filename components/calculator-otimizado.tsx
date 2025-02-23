@@ -1,4 +1,3 @@
-// components/calculator-otimizado.tsx
 "use client"
 
 import { useState } from "react"
