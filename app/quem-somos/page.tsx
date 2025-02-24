@@ -102,10 +102,9 @@ export default function AboutUs() {
           {showBackToTop && (
             <Button
               onClick={scrollToTop}
-              className="fixed bottom-16 right-6 z-50 bg-purple-300 text-purple-700 hover:bg-purple-600 hover:text-white"
+              className="fixed bottom-8 right-6 z-50 justify-center pr-4 pl-4 bg-purple-300/10 text-purple-700 hover:bg-purple-600 hover:text-white"
             >
-              <ArrowUpCircle className="mr-2 h-4 w-4" />
-              Topo
+              <ArrowUpCircle className=" h-4 w-4" />
             </Button>
           )}
 
