@@ -11,36 +11,7 @@ import LoginButton from "@/components/auth/LoginButton";
 import { SignUpForm } from "@/components/auth/SignUpForm";
 import { LoginForm } from "@/components/auth/LoginForm";
 
-export const metadata = {
-  title: "Calculadora Modular - Otimização de Espaços",
-  description:
-    "A Calculadora Modular ajuda arquitetos e profissionais da construção civil a otimizar espaços com cálculos precisos baseados em modulação.",
-  keywords: "calculadora, modular, modulação, coordenação modular, otimização de espaço, arquitetura, lelé, rede sarah, niemeyer, pré-fabricação, construção civil",
-  authors: [{ name: "Diego Viana", url: "https://github.com/diegovianagomes" }],
-  openGraph: {
-    title: "Calculadora Modular - Otimização de Espaços",
-    description:
-      "A Calculadora Modular ajuda arquitetos e profissionais da construção civil a otimizar espaços com cálculos precisos baseados em modulação.",
-    url: "https://calculadora-modular.vercel.app",
-    siteName: "Calculadora Modular",
-    images: [
-      {
-        url: "https://calculadora-modular.vercel.app/image.png",
-        width: 1200,
-        height: 630,
-        alt: "Calculadora Modular - Imagem de destaque",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Calculadora Modular - Modulação de Espaços",
-    description:
-      "A Calculadora Modular ajuda arquitetos e profissionais da construção civil a otimizar espaços com cálculos precisos baseados em modulação.",
-    images: ["https://calculadora-modular.vercel.app/image.png"],
-  },
-};
+
 
 export default function Home() {
   const [results, setResults] = useState<any[]>([]);
