@@ -156,7 +156,7 @@ export default function HelpPage() {
           className="fixed bottom-16 right-6 z-50 bg-purple-300/20 text-purple-700 hover:bg-purple-600 hover:text-white"
         >
           <ArrowUpCircle className="h-4 w-4" />
-          Topo
+        
         </Button>
       )}
     </div>
