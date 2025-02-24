@@ -21,7 +21,7 @@ export function LogoutButton() {
   };
 
   return (
-    <Button onClick={handleLogout} disabled={loading} className="flex items-center gap-2 bg-transparent text-purple-600 hover:underline hover:bg-transparent hover:text-purple-800">
+    <Button onClick={handleLogout} disabled={loading} className=" pb-0 pt-0 pl-0 pr-0 text-right justify-end items-center gap-2 bg-transparent text-purple-600 hover:underline hover:bg-transparent hover:text-purple-800">
       {loading ? "Saindo..." : "Sair"}
     </Button>
   );
