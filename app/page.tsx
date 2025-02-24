@@ -1,4 +1,3 @@
-// page.tsx
 "use client";
 import { useState } from "react";
 import { Calculator } from "@/components/calculator";
@@ -17,8 +16,7 @@ export default function Home() {
   const [results, setResults] = useState<any[]>([]);
   const [originalArea, setOriginalArea] = useState<number>(0);
   const [activeMode, setActiveMode] = useState<"axl" | "area">("axl");
-  const [authTab, setAuthTab] = useState<"login" | "signup">("login"); 
-
+  const [authTab, setAuthTab] = useState<"login" | "signup">("login");
 
   const [user, loading] = useAuthState(auth);
 
@@ -27,20 +25,10 @@ export default function Home() {
       <Header />
       <main className="min-h-full mx-auto flex items-center justify-center p-8">
         <div className="w-full max-w-3xl">
-          {/* Exibe o botão de login ou as abas */}
           {loading ? (
             <p className="text-purple-700">Carregando...</p>
           ) : user ? (
             <>
-              <div className="p-2 flex items-center justify-between gap-4">
-                <p className="text-purple-700">
-                  Bem-vindo, {user.displayName || user.email}!
-                </p>
-                <div className="flex items-center">
-                  <LogoutButton />
-                </div>
-              </div>
-
               {/* Container das abas */}
               <div className="mb-0 flex justify-start relative">
                 <div className="flex gap-1 w-full">
@@ -58,7 +46,6 @@ export default function Home() {
                     <span className="items-center justify-center h-full">
                       Comprimento x Largura
                     </span>
-                    {/* Conector da Aba */}
                     {activeMode === "axl" && (
                       <div className="absolute bottom-[-4px] left-0 right-0 h-1 bg-white z-20" />
                     )}
@@ -77,13 +64,13 @@ export default function Home() {
                     <span className="items-center justify-center h-full">
                       Área
                     </span>
-                    {/* Conector da Aba*/}
                     {activeMode === "area" && (
                       <div className="absolute bottom-[-4px] left-0 right-0 h-1 bg-white z-20" />
                     )}
                   </Button>
                 </div>
               </div>
+
               {/* Conteúdo das abas */}
               <div className="relative z-10 rounded-xl rounded-tl-none rounded-tr-none border-2 border-purple-300 bg-white px-8 py-6">
                 {activeMode === "axl" ? (
@@ -102,6 +89,7 @@ export default function Home() {
                   />
                 )}
               </div>
+
               {/* Resultados */}
               {results.length > 0 && (
                 <div className="mt-8 space-y-4">
@@ -140,10 +128,10 @@ export default function Home() {
             </>
           ) : (
             <div className="flex flex-col items-center justify-center gap-4">
-              <p className="font-bold text-purple-700">
-                Seja bem-vindo! 
+              <p className="font-bold text-purple-700">Seja bem-vindo!</p>
+              <p className="text-base text-purple-400">
+                Faça login ou cadastre-se para continuar.
               </p>
-              <p className="text-base text-purple-400">Faça login ou cadastre-se para continuar.</p>
 
               {/* Abas de Login/Cadastro */}
               <div className="w-full">
@@ -188,11 +176,7 @@ export default function Home() {
 
                 {/* Conteúdo das abas de Login/Cadastro */}
                 <div className="relative z-10 rounded-xl rounded-tl-none rounded-tr-none border-2 border-purple-300 bg-white px-8 py-6">
-                  {authTab === "login" ? (
-                    <LoginForm />
-                  ) : (
-                    <SignUpForm />
-                  )}
+                  {authTab === "login" ? <LoginForm /> : <SignUpForm />}
                 </div>
               </div>
 
